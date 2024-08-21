@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.products.category.dto.GetSingleProductResponseDto;
 import com.products.category.dto.ProductDto;
+import com.products.category.model.Category;
 import com.products.category.model.Product;
 import com.products.category.service.ProductsService;
 
@@ -59,7 +60,8 @@ public class ProductController {
 	}
 
 	@PutMapping("/{productId}")
-	public String updateProduct(@PathVariable("productId") Long productId) {
+	public String updateProduct(@RequestBody ProductDto productDto
+			,@PathVariable("productId") Long productId) {
 		return "";
 	}
 
